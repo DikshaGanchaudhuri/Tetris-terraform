@@ -1,4 +1,16 @@
 #!/bin/bash
+apt-get update -y
+apt-get install -y nginx git
+
+systemctl start nginx
+systemctl enable nginx
+
+cd /var/www/html
+rm -rf *
+
+git clone https://github.com/jakesgordon/javascript-tetris.git .
+
+chmod -R 755 /var/www/html#!/bin/bash
 yum update -y
 yum install -y nginx git
 
