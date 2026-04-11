@@ -10,4 +10,5 @@ rm -rf *
 
 git clone https://github.com/jakesgordon/javascript-tetris.git .
 
-chown -R nginx:nginx /usr/share/nginx/html
+# Amazon Linux 2 uses 'nginx' group but files owned by root is fine
+chmod -R 755 /usr/share/nginx/html
